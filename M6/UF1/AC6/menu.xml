@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <comida id="1">
+        <nombre>Waffles</nombre>
+        <precio>2</precio>
+        <descripcion>Waffles baratos de McDonalds</descripcion>
+        <calorias>650</calorias>
+    </comida>
+    <comida id="2">
+        <nombre>Hamburguesa</nombre>
+        <precio>5</precio>
+        <descripcion>La hamburguesa mas comun de McDonalds</descripcion>
+        <calorias>1500</calorias>
+    </comida>  
+    <comida id="3">
+	<nombre>Kebab</nombre>
+	<precio>3</precio>
+	<descripcion>El bueno de Doner Kebab haciendo kebabs</descripcion>
+	<calorias>3000</calorias>
+    </comida>
+    <comida id="4">
+	<nombre>Viena</nombre>
+	<precio>7</precio>
+	<descripcion>Recien llegado de Alemania el Viena es la mejor de las salchichas</descripcion>
+	<calorias>2000</calorias>
+    </comida> 
+</menu>
