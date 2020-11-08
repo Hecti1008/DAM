@@ -5,6 +5,7 @@
  */
 package ac5;
 
+import static java.awt.SystemColor.text;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
@@ -16,7 +17,7 @@ import javax.crypto.Cipher;
  *
  * @author megah
  */
-public class AC5 {
+public class AC5_noDual {
 
     /**
      * @param args the command line arguments
@@ -60,6 +61,23 @@ public class AC5 {
         
         
         System.out.println();
+        
+        System.out.println("TEXT: ");
+        text = scan.nextLine();
+        byte[] arrayText = text.getByte();
+        
+        long inici = System.currentTimeMillis();
+        
+        KeyPair clau = randomGenerate(longitudC);
+        clauPrivada = clau.getPrivate();
+        clauPublica = clau.getPublic();
+        long fin = System.currentTimeMillis() - inici;
+        
+        byte[] arrayTextE = criptedDAta(arrayText, clauPublica);
+        textEncr = new String(arrayTextE);
+        
+        byte[]
+
     } 
     
     
@@ -108,5 +126,4 @@ public class AC5 {
     
     
     
-
 }
