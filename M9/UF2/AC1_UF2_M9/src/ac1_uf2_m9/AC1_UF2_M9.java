@@ -16,11 +16,11 @@ public class AC1_UF2_M9 {
     /**
      * @param args the command line arguments
      */
-    static class Multiplicacio implements Callable<Integer> {
+    static class Suma implements Callable<Integer> {
 			private int operador1;
 			private int operador2;
 			
-			public Multiplicacio(int operador1, int operador2) {
+			public Suma(int operador1, int operador2) {
 				this.operador1 = operador1;
 				this.operador2 = operador2;
 				}
@@ -36,14 +36,14 @@ public class AC1_UF2_M9 {
     
     
     public static void main(String[] args) throws InterruptedException, ExecutionException {
-      //creem 3 fils
+      //creem 5 fils
 				ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
 				
-				List<Multiplicacio> llistaTasques= new ArrayList<Multiplicacio>();
+				List<Suma> llistaTasques= new ArrayList<Suma>();
 				//va fent combinacions de 25 numeros 
 				for (int i = 0; i < 25; i++) {
 					//inicialitzem els numeros aleatorris a l'objecte
-					Multiplicacio calcula = new Multiplicacio((int)(Math.random()*10), (int)(Math.random()*10));
+					Suma calcula = new Suma((int)(Math.random()+10), (int)(Math.random()+10));
 					llistaTasques.add(calcula);
 					}
 				List <Future<Integer>> llistaResultats;
